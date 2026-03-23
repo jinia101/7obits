@@ -1,0 +1,10 @@
+{
+  "name": "@7obits/queues",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "dependencies": {
+    "bullmq": "^5.71.0",
+    "ioredis": "^5.10.1"
+  }
+}

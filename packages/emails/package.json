@@ -1,0 +1,10 @@
+{
+  "name": "@7obits/emails",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "dependencies": {
+    "@react-email/components": "^1.0.10",
+    "resend": "^6.9.4"
+  }
+}

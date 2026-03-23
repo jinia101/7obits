@@ -1,0 +1,37 @@
+{
+  "name": "@7obits/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@7obits/db": "workspace:*",
+    "@7obits/queues": "workspace:*",
+    "@7obits/payments": "workspace:*",
+    "@7obits/ui": "workspace:*",
+    "@7obits/emails": "workspace:*",
+    "@7obits/config": "workspace:*",
+    "@react-pdf/renderer": "^4.3.2",
+    "@supabase/supabase-js": "^2.100.0",
+    "@tanstack/react-query": "^5.95.2",
+    "next": "16.2.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "zod": "^4.3.6",
+    "zustand": "^5.0.12"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@7obits/payments",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "dependencies": {
+    "razorpay": "^2.9.6",
+    "stripe": "^20.4.1"
+  }
+}

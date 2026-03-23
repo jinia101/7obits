@@ -1,0 +1,32 @@
+# Dependency directories
+node_modules/
+.pnpm-store/
+
+# Next.js build output
+.next/
+out/
+
+# Turborepo cache
+.turbo/
+
+# Environment variables (CRITICAL: Never commit these)
+.env
+*.env.local
+.env.*.local
+
+# TypeScript & Build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Supabase local config (if you use local DB)
+.supabase/
