@@ -1,13 +1,13 @@
 module.exports = {
-  extends: ["next/core-web-vitals", "prettier"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+  extends: [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+  ],
   rules: {
-    "@next/next/no-html-link-for-pages": "off",
-    "no-unused-vars": "warn",
-    "prefer-const": "error"
-  },
-  parserOptions: {
-    babelOptions: {
-      presets: [require.resolve("next/babel")],
-    },
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-unused-vars": "error",
+    "no-console": "warn",
   },
 };

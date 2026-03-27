@@ -1,5 +1,5 @@
 {
-  "extends": "@7obits/config/tsconfig.node.json",
+  "extends": "@7obits/config/tsconfig.base.json",
   "compilerOptions": {
     "rootDir": "./src",
     "outDir": "./dist"
