@@ -8,7 +8,11 @@
     "test": "turbo test",
     "dev": "turbo dev",
     "build": "turbo build",
-    "lint": "turbo lint"
+    "lint": "turbo lint",
+    "db:push": "supabase db push",
+    "db:pull": "supabase db pull",
+    "db:reset": "supabase db reset",
+    "db:generate": "supabase gen types typescript --project-id $SUPABASE_PROJECT_REF > packages/db/types/supabase.ts"
   },
   "keywords": [],
   "author": "",
