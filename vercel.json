@@ -1,18 +1,4 @@
 {
-  "version": 2,
-  "buildCommand": "pnpm build",
-  "installCommand": "pnpm install",
-  "outputDirectory": "apps/web/.next",
-  "builds": [
-    {
-      "src": "apps/web/package.json",
-      "use": "@vercel/next"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "apps/web/$1"
-    }
-  ]
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2
 }
