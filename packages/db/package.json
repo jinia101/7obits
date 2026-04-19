@@ -11,6 +11,8 @@
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
-    "@7obits/config": "workspace:*"
+    "@7obits/config": "workspace:*",
+    "@types/node": "^25.5.2",
+    "next": "16.2.1"
   }
 }

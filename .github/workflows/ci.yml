@@ -53,6 +53,17 @@ jobs:
           TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
           TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
 
+      - name: Update types from Supabase
+        run: pnpm supabase gen types typescript --project-id ${{ secrets.SUPABASE_PROJECT_ID }} > packages/db/types/supabase.ts
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+
+      - name: Auto-commit updated types
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update supabase types [skip ci]"
+          file_pattern: 'packages/db/types/supabase.ts'
+
 
   # TODO: Uncomment when Phase 8 is complete and all env vars are in GitHub Secrets
   # deploy:

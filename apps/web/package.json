@@ -17,6 +17,7 @@
     "@7obits/emails": "workspace:*",
     "@7obits/config": "workspace:*",
     "@react-pdf/renderer": "^4.3.2",
+    "@supabase/ssr": "^0.9.0",
     "@supabase/supabase-js": "^2.100.0",
     "@tanstack/react-query": "^5.95.2",
     "next": "16.2.1",
