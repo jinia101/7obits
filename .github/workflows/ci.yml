@@ -9,6 +9,8 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
+    env:
+      HAS_SUPABASE: ${{ secrets.SUPABASE_ACCESS_TOKEN != '' && secrets.SUPABASE_PROJECT_ID != '' }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -54,11 +56,20 @@ jobs:
           TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
 
       - name: Update types from Supabase
-        run: pnpm supabase gen types typescript --project-id ${{ secrets.SUPABASE_PROJECT_ID }} > packages/db/types/supabase.ts
+        if: env.HAS_SUPABASE == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          tmp="$(mktemp)"
+          pnpm exec supabase gen types typescript \
+            --project-id "${{ secrets.SUPABASE_PROJECT_ID }}" > "$tmp"
+          mkdir -p packages/db/types
+          mv "$tmp" packages/db/types/supabase.ts
         env:
           SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
 
       - name: Auto-commit updated types
+        if: env.HAS_SUPABASE == 'true'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: update supabase types [skip ci]"
