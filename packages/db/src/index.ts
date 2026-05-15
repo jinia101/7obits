@@ -20,3 +20,7 @@ export type NewProject = Tables['projects']['Insert']
 export type NewInvoice = Tables['invoices']['Insert']
 export type NewProposal = Tables['proposals']['Insert']
 export type NewClient = Tables['clients']['Insert']
+
+export { createServerClient } from './server'
+export { createClient } from './client'
+export { createAdminClient } from './admin'
